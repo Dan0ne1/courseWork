@@ -170,6 +170,13 @@ public class ChatServer4 {
                     if (input.toLowerCase().startsWith("/quit")) {
                         return;
                     }
+                    if (input.toLowerCase().startsWith("/info")) {
+                        System.out.println("Group members IDs are: " + ids);
+                        System.out.println("Group members IPs are: " + ips1);
+                        System.out.println("Servers IPs are: " + ips2);
+                        System.out.println("Group members PORTs are: " + ports1);
+                        System.out.println("Servers PORTs are: " + ports2);
+                    }
                     for (PrintWriter writer : writers) {
                         writer.println("MESSAGE " + id + ": " + input);
                     }

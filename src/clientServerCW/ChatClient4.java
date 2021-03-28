@@ -104,6 +104,7 @@ public class ChatClient4 {
                 // member should be informed about being 1-st at start-up (something wrong, needs to be revised:
                 else if (line.startsWith("COORDINATOR")) {
                     this.frame.setTitle("ChatWindow - " + line.substring(11) + " - COORDINATOR");
+                    JOptionPane.showMessageDialog(frame, "You are the Coordinator of this chat!");
                 } else if (line.startsWith("MESSAGE")) {
                     messageArea.append(line.substring(8) + "\n");
                 }
